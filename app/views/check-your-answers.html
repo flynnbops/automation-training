@@ -1,11 +1,19 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   Check your answers
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/juggling-trick">Back</a>
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    This is not a real service. Its intended for training purposes only.
+  </strong>
+</div>
+
+  <a class="govuk-back-link" href="/file_upload">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,34 +22,81 @@
 
       <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
 
-      <h2 class="govuk-heading-m">Personal details</h2>
+      <h2 class="govuk-heading-m">Submitted details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Number of balls you can juggle
+            Have you looked at the skeleton?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['how-many-balls'] }}
+            {{ data['skeleton'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/juggling-balls">
-              Change number of balls
-              <span class="govuk-visually-hidden"> number of balls you can juggle</span>
+            <a href="/skeleton">
+              Change skeleton answer
+              <span class="govuk-visually-hidden"> /span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Your most impressive juggling trick
+            Why are you using this service?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['most-impressive-trick'] }}
+            {{ data['service'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="juggling-trick">
-              Change your trick
-              <span class="govuk-visually-hidden"> your most impressive juggling trick/span>
+            <a href="service">
+              Change your reason
+              <span class="govuk-visually-hidden"> /span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is your address?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['address-line-1'] }} <br> 
+            {{ data['address-line-2'] }} <br> 
+            {{ data['address-town'] }} <br> 
+            {{ data['address-county'] }} <br> 
+            {{ data['address-postcode'] }} <br> 
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="address">
+              Change your address
+              <span class="govuk-visually-hidden"> /span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What do you like?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['like'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="checkbox">
+              Change your likes
+              <span class="govuk-visually-hidden"> /span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Upload a file
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['file-upload-1'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="file_upload">
+              Change your file
+              <span class="govuk-visually-hidden"> /span>
             </a>
           </dd>
         </div>
@@ -49,7 +104,7 @@
 
       <h2 class="govuk-heading-m">Now send your application</h2>
 
-      <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <p>By submitting this application you confirm, some information was submitted.</p>
 
       <form action="/confirmation" method="post" novalidate>
 

@@ -1,8 +1,9 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Confirmation page
+  Service page
 {% endblock %}
+
 
 {% block beforeContent %}
 <div class="govuk-warning-text">
@@ -12,23 +13,23 @@
     This is not a real service. Its intended for training purposes only.
   </strong>
 </div>
+  <a class="govuk-back-link" href="/skeleton">Back</a>
 {% endblock %}
 
 {% block content %}
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/address" method="post">
 
-      <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">Application complete</h1>
-        <div class="govuk-panel__body">
-          Your reference number<br><strong>AUTO119</strong>
+        <div class="govuk-form-group">
+          <h1 class="govuk-heading-xl">Why are you using this service?</h1>
+          <textarea class="govuk-textarea" id="service" name="service" rows="5" aria-describedby="more-detail-hint"> </textarea>
         </div>
-      </div>
 
-      <h2 class="govuk-heading-m">What happens next</h2>
-      <p>We've sent your application into a black hole</p>
-      <p>And we have no idea what will actually happen to it.</p>
-      <p><a href="/index"/a> Submit another application</p>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
 
     </div>
   </div>

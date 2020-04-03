@@ -1,0 +1,72 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Checkbox page
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    This is not a real service. Its intended for training purposes only.
+  </strong>
+</div>
+  <a class="govuk-back-link" href="/address">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+
+  <form class="form" action="/file_upload" method="post">
+
+  <fieldset class="govuk-fieldset" aria-describedby="like-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+        Which things do you like?
+      </h1>
+    </legend>
+    <span id="like-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="like" name="like" type="checkbox" value="ruby">
+        <label class="govuk-label govuk-checkboxes__label" for="like">
+          Rubies
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="like-2" name="like" type="checkbox" value="cucumber">
+        <label class="govuk-label govuk-checkboxes__label" for="like-2">
+          Cucumbers
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="like-3" name="like" type="checkbox" value="capybara">
+        <label class="govuk-label govuk-checkboxes__label" for="like-3">
+          Capybaras
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="like-4" name="like" type="checkbox" value="skeleton">
+        <label class="govuk-label govuk-checkboxes__label" for="like-4">
+          Skeletons
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="like-5" name="like" type="checkbox" value="automation">
+        <label class="govuk-label govuk-checkboxes__label" for="like-5">
+          Automation
+        </label>
+      </div>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+  </fieldset>
+  </form>
+</div>
+
+{% endblock %}

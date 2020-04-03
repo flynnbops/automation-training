@@ -1,0 +1,44 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  File upload page
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    This is not a real service. Its intended for training purposes only.
+  </strong>
+</div>
+  <a class="govuk-back-link" href="/checkbox">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/check-your-answers" method="post">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-heading-xl">Please upload a file</h1>
+          <h2 class="govuk-heading-m">A small text or PDF file please</h2>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="file-upload-1">
+            Upload a file
+          </label>
+          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

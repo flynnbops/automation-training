@@ -1,0 +1,67 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Address page
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    This is not a real service. Its intended for training purposes only.
+  </strong>
+</div>
+  <a class="govuk-back-link" href="/service">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="/checkbox" method="post">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+        What is your address?
+      </h1>
+    </legend>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-1">
+        Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+      </label>
+      <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-2">
+        <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+      </label>
+      <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-town">
+        Town or city
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-county">
+        County
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-postcode">
+        Postcode
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+  </fieldset>
+</form>
+{% endblock %}
