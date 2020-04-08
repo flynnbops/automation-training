@@ -18,20 +18,40 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
+  <!-- <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="/address" method="post">
-
         <div class="govuk-form-group">
           <h1 class="govuk-heading-xl">Why are you using this service?</h1>
           <textarea class="govuk-textarea" id="service" name="service" rows="5" aria-describedby="more-detail-hint"> </textarea>
         </div>
-
         <button class="govuk-button" data-module="govuk-button">Continue</button>
-
       </form>
 
     </div>
-  </div>
+  </div> -->
+
+  <form class="form" action="/address" method="post">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading">
+          Why are you using this service?
+        </h1>
+      </legend>
+  
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="service">
+          Your reason
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">
+          Do not include personal or financial information, like your National Insurance number or credit card details.
+        </span>
+        <textarea class="govuk-textarea" id="service" name="service" rows="5" aria-describedby="more-detail-hint"> </textarea>
+      </div>
+  
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </fieldset>
+  </form>
+
 
 {% endblock %}
