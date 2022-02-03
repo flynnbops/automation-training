@@ -10,6 +10,8 @@ Information between pages is stored as browser session data. No information is "
 # Installation and updating
 Are both covered in the prototype docs. See [install instructions](https://govuk-prototype-kit.herokuapp.com/docs/install/developer-install-instructions) and [update instructions](https://govuk-prototype-kit.herokuapp.com/docs/updating-the-kit) for more details.
 
+To make adhoc updates to NPM dependencies have a look at the article [upgrading npm dependencies](https://www.carlrippon.com/upgrading-npm-dependencies/) for some guidance.
+
 # Local development
 
 1. Navigate to the project root e.g. `automation-training`
