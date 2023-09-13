@@ -3,7 +3,7 @@ This is a training site, built using the [GOV.uk prototype kit](https://govuk-pr
 
 It was originally  built so people can practice writing automated tests against something that is "gov.uk like". It is not an accurate representation of a government service. But, it does use components and patterns from the [design system](https://design-system.service.gov.uk/get-started/).
 
-The current version is hosted on heroku at https://automation-training.herokuapp.com/.
+The current version is hosted on Render at https://automation-training.onrender.com/
 
 Information between pages is stored as browser session data. No information is "sent anywhere" when the mock application is complete. This is just pages connected together with no validation of input.
 
